@@ -155,13 +155,11 @@ const LaptopScrollIntro = ({ children }) => {
                   style={{
                     width: previewW,
                     height: previewH,
-                    transform: `scale(${scaleInner})`,
+                    transform: `translate(-50%, -50%) scale(${scaleInner})`,
                     transformOrigin: "center center",
                     position: "absolute",
                     left: "50%",
                     top: "50%",
-                    x: "-50%",
-                    y: "-50%",
                   }}
                   className="pointer-events-none select-none overflow-hidden"
                 >
