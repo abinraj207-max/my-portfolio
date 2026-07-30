@@ -42,7 +42,7 @@ const Navbar = () => {
 
           {/* Resume */}
 
-          <a href="/resume.pdf" download="Abin_Raj_Resume.pdf">
+          <a href="./resume.pdf" download="Abin_Raj_Resume.pdf">
             <Button>
               Download CV
             </Button>
