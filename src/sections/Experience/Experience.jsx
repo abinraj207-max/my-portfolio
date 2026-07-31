@@ -42,9 +42,15 @@ const Experience = () => {
         <div className="grid gap-10 lg:grid-cols-[3fr_1fr]">
           
           {/* Timeline Section */}
-          <div className="relative rounded-3xl border border-slate-800 bg-slate-900 p-8 lg:p-10">
+          <div className="relative rounded-3xl border border-slate-800 bg-slate-900 p-6 md:p-8 lg:p-10">
             {/* Horizontal Line for md+ screens */}
-            <div className="absolute left-10 right-10 top-20 hidden h-[1px] bg-slate-800 md:block" />
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+              className="absolute left-10 right-10 top-20 hidden h-[1px] origin-left bg-slate-700 md:block" 
+            />
             
             <div className="grid gap-10 md:grid-cols-3 md:gap-6 relative z-10">
               {timeline.map((item, index) => {
@@ -59,9 +65,12 @@ const Experience = () => {
                     className="relative flex flex-col items-center text-center md:items-start md:text-left"
                   >
                     {/* Clean Node */}
-                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-800">
-                      <Icon size={20} className="text-slate-400" />
-                    </div>
+                    <motion.div 
+                      whileHover={{ scale: 1.15, borderColor: "#3b82f6", boxShadow: "0px 0px 15px rgba(59, 130, 246, 0.3)" }}
+                      className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-800 transition-all duration-300"
+                    >
+                      <Icon size={20} className="text-slate-400 group-hover:text-blue-400 transition-colors" />
+                    </motion.div>
 
                     <span className="mb-2 text-xs font-semibold text-slate-500 tracking-widest uppercase">
                       {item.year}
@@ -82,8 +91,9 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ y: -8, borderColor: "#3b82f6", boxShadow: "0px 10px 30px rgba(59, 130, 246, 0.1)" }}
             viewport={{ once: true }}
-            className="flex flex-col justify-center rounded-3xl border border-slate-800 bg-slate-900 p-8"
+            className="flex flex-col justify-center rounded-3xl border border-slate-800 bg-slate-900 p-6 md:p-8 transition-all duration-300"
           >
             <div className="mb-4 text-5xl font-serif text-slate-700">"</div>
             <p className="mb-6 text-sm font-medium leading-relaxed text-slate-300 italic">

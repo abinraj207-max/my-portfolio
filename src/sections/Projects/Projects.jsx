@@ -63,22 +63,12 @@ const Projects = () => {
             </h2>
           </motion.div>
 
-          <motion.a
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            href="#"
-            className="group flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            View All Projects
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </motion.a>
         </div>
 
         {/* Project Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {projects.map((project, index) => (
-            <Tilt 
+            <Tilt
               key={index}
               tiltMaxAngleX={8}
               tiltMaxAngleY={8}
@@ -98,44 +88,38 @@ const Projects = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition-all duration-300 hover:border-slate-700 hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.05)]"
               >
-              {/* Image Area */}
-              <div className="relative h-40 w-full overflow-hidden bg-slate-800">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover object-top opacity-90 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              {/* Content Area */}
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-lg font-bold text-white">{project.title}</h3>
-                <p className="mb-3 text-xs font-medium text-blue-400">{project.subtitle}</p>
-                <p className="mb-6 flex-1 text-xs leading-relaxed text-slate-400">
-                  {project.description}
-                </p>
-
-                {/* Tech Tags */}
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-md border border-slate-700/50 bg-slate-800 px-2 py-1 text-[10px] font-medium text-slate-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* Image Area */}
+                <div className="relative h-40 w-full overflow-hidden bg-slate-800">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover object-top opacity-90 transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
-                {/* View Link */}
-                <a
-                  href={project.link}
-                  className="group/link flex items-center gap-2 text-xs font-medium text-blue-400 transition-colors hover:text-blue-300"
-                >
-                  View Project
-                  <ArrowRight size={14} className="transition-transform group-hover/link:translate-x-1" />
-                </a>
-              </div>
+                {/* Content Area */}
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="text-lg font-bold text-white">{project.title}</h3>
+                  <p className="mb-3 text-xs font-medium text-blue-400">{project.subtitle}</p>
+                  <p className="mb-6 flex-1 text-xs leading-relaxed text-slate-400">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Tags */}
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md border border-slate-700/50 bg-slate-800 px-2 py-1 text-[10px] font-medium text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* View Link */}
+
+                </div>
               </motion.div>
             </Tilt>
           ))}

@@ -28,7 +28,7 @@ const About = () => {
           className="relative overflow-hidden rounded-3xl border border-slate-700 bg-slate-900/50 backdrop-blur-xl"
         >
           {/* Minimal Background */}
-          <div className="relative z-10 grid gap-10 p-10 lg:grid-cols-[1.5fr_1fr]">
+          <div className="relative z-10 grid gap-8 p-6 md:p-8 lg:p-10 lg:grid-cols-[1.5fr_1fr]">
             {/* Left Column: Text & Button */}
             <div className="flex flex-col justify-center">
               <ScrollRevealText 
@@ -36,8 +36,12 @@ const About = () => {
                 className="text-xl md:text-2xl lg:text-3xl font-medium leading-tight text-white"
               />
               <div className="mt-8">
-                <Button variant="secondary" className="group">
-                  <User size={18} className="text-blue-400" />
+                <Button 
+                  variant="secondary" 
+                  className="group"
+                  onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <User size={18} className="text-blue-400 group-hover:scale-110 transition-transform" />
                   <span>Know More About Me</span>
                 </Button>
               </div>

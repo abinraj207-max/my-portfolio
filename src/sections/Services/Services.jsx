@@ -83,7 +83,7 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative flex flex-col rounded-3xl border border-slate-800 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-slate-700"
+                className="group relative flex flex-col rounded-3xl border border-slate-800 bg-slate-900 p-6 md:p-8 transition-all duration-300 hover:-translate-y-2 hover:border-slate-700"
               >
                 {/* Icon Box */}
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-800 bg-slate-900/50 transition-colors group-hover:border-slate-700">

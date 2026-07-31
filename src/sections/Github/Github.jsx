@@ -53,7 +53,7 @@ const GithubSection = () => {
 
                 {/* Main Card */}
 
-                <div className="mt-20 rounded-3xl border border-slate-800 bg-slate-900/60 p-10">
+                <div className="mt-20 rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 lg:p-10">
 
                     <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
 
