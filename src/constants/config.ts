@@ -16,11 +16,11 @@ const CONFIG = {
 
   availableForWork: true,
 
-  resume: "/resume.pdf",
+  resume: "resume.pdf",
 
-  profileImage: "/images/profile.png",
+  profileImage: "images/profile.png",
 
-  logo: "/images/logo.png",
+  logo: "images/logo.png",
 };
 
 export default CONFIG;

@@ -8,7 +8,7 @@ export const projects = [
     description:
       "Complete business management platform with POS, inventory, staff management and analytics.",
 
-    image: "/images/projects/zeetrackz.png",
+    image: "images/projects/zeetrackz.png",
 
     technologies: [
       "Flutter",
@@ -31,7 +31,7 @@ export const projects = [
     description:
       "Hyperlocal food delivery platform with customer, restaurant and delivery partner applications.",
 
-    image: "/images/projects/zwipez.png",
+    image: "images/projects/zwipez.png",
 
     technologies: [
       "Flutter",
@@ -54,7 +54,7 @@ export const projects = [
     description:
       "Employee attendance system with reports, check-in, check-out and real-time tracking.",
 
-    image: "/images/projects/attendance.png",
+    image: "images/projects/attendance.png",
 
     technologies: [
       "Flutter",
@@ -77,7 +77,7 @@ export const projects = [
     description:
       "Desktop billing software with GST, inventory, barcode scanner and thermal printer support.",
 
-    image: "/images/projects/pos.png",
+    image: "images/projects/pos.png",
 
     technologies: [
       "Flutter",
@@ -99,7 +99,7 @@ export const projects = [
     description:
       "Government digital ration shop concept with home delivery and online ordering.",
 
-    image: "/images/projects/ration.png",
+    image: "images/projects/ration.png",
 
     technologies: [
       "Flutter",
